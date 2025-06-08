@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "www:dev": "pnpm --filter=www dev"
+    "www:dev": "pnpm --filter=www dev",
+    "www": "pnpm -F 'www'"
   },
   "keywords": [],
   "author": "",
