@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "@tanstack/react-form": "^1.12.2",
     "@tanstack/zod-form-adapter": "^0.42.1",
     "clsx": "2.1.1",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Noto_Sans_JP, IBM_Plex_Sans_JP } from "next/font/google";
 import "./globals.css";
 
 const notoSansJp = Noto_Sans_JP({
@@ -7,6 +7,15 @@ const notoSansJp = Noto_Sans_JP({
   weight: ["400", "500", "700"],
   // preload: false,
   variable: "--font-noto-sans-jp",
+  // display: "swap",
+  fallback: ["Hiragino Sans", "Hiragino Kaku Gothic ProN", "sans-serif"],
+});
+
+const ibmPlexSansJp = IBM_Plex_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  // preload: false,
+  variable: "--font-ibm-plex-sans-jp",
   // display: "swap",
   fallback: ["Hiragino Sans", "Hiragino Kaku Gothic ProN", "sans-serif"],
 });
@@ -23,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSansJp.variable} antialiased`}>{children}</body>
+      <body className={`${ibmPlexSansJp.variable} `}>{children}</body>
     </html>
   );
 }
