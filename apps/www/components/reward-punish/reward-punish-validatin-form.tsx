@@ -11,7 +11,7 @@ import { Input } from "@/registry/default/ui/input";
 import { Button } from "@/registry/default/ui/button";
 import { LinkStyle } from "@/registry/link";
 
-export const OnBlurRewardPunishForm = () => {
+export const RewardPunishValidationForm = () => {
   const form = useForm({
     defaultValues: {
       name: "",

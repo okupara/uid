@@ -11,8 +11,9 @@ export const Button = ({ className, children }: ButtonProps) => {
         // inline layout
         "flex items-center justify-center",
         // effects
-        "bg-[linear-gradient(145deg,#333333,#222222)]",
-        "shadow-[0_3px_0_#151515,0_0_10px_rgba(0,0,0,0.3)]",
+        "bg-[linear-gradient(145deg,#333333,#222222)] hover:bg-[linear-gradient(145deg,#555555,#333333)]",
+        // "shadow-[0_3px_0_#151515,0_0_10px_rgba(0,0,0,0.3)]",
+        "shadow-[0_2px_0_#151515,0_0_10px_rgba(0,0,0,0.3)]",
         // pseudo before content's layout
         "before:content-[''] before:absolute before:inset-0 rounded-[8px]",
         // pseudo before content's effects

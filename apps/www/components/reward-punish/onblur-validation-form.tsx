@@ -1,8 +1,12 @@
-import { ArrowSquareOutIcon, DogIcon } from "@phosphor-icons/react";
+import {
+  ArrowSquareOutIcon,
+  DogIcon,
+  WarningIcon,
+} from "@phosphor-icons/react";
 import { FormContentLayout } from "./form-content-layout";
 import { useForm } from "@tanstack/react-form";
 import { FormData, nameSchema, emailScema } from "./schema";
-import { Input } from "@/registry/default/ui/_input";
+import { Input } from "@/registry/default/ui/input";
 import { Button } from "@/registry/default/ui/button";
 import { LinkStyle } from "@/registry/link";
 
@@ -46,8 +50,18 @@ export const OnBlurValidationForm = () => {
             >
               {(field) => (
                 <ItemLayout>
-                  <label className="text-sand-950" htmlFor={`${field.name}-1`}>
-                    お名前
+                  <label
+                    className="text-sand-950 flex items-center gap-1"
+                    htmlFor={`${field.name}-1`}
+                  >
+                    <span>お名前</span>
+                    {/* <WarningIcon
+                      color="currentColor"
+                      className="text-red-600"
+                      weight="regular"
+                    
+                      size={24}
+                    /> */}
                   </label>
                   <Input
                     id={`${field.name}-1`}
@@ -60,7 +74,7 @@ export const OnBlurValidationForm = () => {
                     }
                   />
                   {field.state.meta.errors.length > 0 && (
-                    <span className="text-sm text-red-600">
+                    <span className="flex items-end gap-1 text-sm text-red-600">
                       {field.state.meta.errors[0]?.message}
                     </span>
                   )}
@@ -91,7 +105,7 @@ export const OnBlurValidationForm = () => {
                     }
                   />
                   {field.state.meta.errors.length > 0 && (
-                    <span className="font-medium text-red-600">
+                    <span className="text-sm text-red-600">
                       {field.state.meta.errors[0]?.message}
                     </span>
                   )}

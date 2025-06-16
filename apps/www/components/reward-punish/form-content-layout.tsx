@@ -26,8 +26,28 @@ export const FormContentLayout = ({
         className={cn("flex flex-col p-4 relative items-center justify-center")}
       >
         <div>
-          <div className="absolute top-[-40px] left-[calc(50%-40px)] h-[74px] w-[80px] bg-olive-150 rounded-full" />
-          <div className="absolute top-[-24px] left-[calc(50%-15px)] w-[30px] h-[30px]">
+          <div
+            className={cn(
+              "absolute top-[-40px] left-[calc(50%-40px)] h-[70px] w-[80px] bg-olive-150 rounded-full",
+              // before content
+              "before:content-[''] before:absolute before:top-[calc(50%-18px)] before:right-[-22px] before:w-[24px] before:h-[24px] before:rounded-full before:shadow-[-10px_10px_0_#fff]",
+              // debug
+              "before:bg-[#eff1ef]",
+              // go
+              "before:bg-transparent before:shadow-[-10px_10px_0_#eff1ef]",
+              // before content
+              "after:content-[''] after:absolute after:top-[calc(50%-18px)] after:left-[-22px] after:w-[24px] after:h-[24px] after:rounded-full after:shadow-[10px_10px_0_#fff]",
+              // debug
+              "after:bg-[#eff1ef]",
+              // go
+              "after:bg-transparent after:shadow-[10px_10px_0_#eff1ef]"
+            )}
+          />
+          <div
+            className={cn([
+              "absolute top-[-24px] left-[calc(50%-15px)] w-[30px] h-[30px]",
+            ])}
+          >
             {iconRender}
           </div>
         </div>
